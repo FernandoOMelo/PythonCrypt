@@ -1,5 +1,5 @@
 # Programa com objeto de criptografar um texto simples, a criptografia seguira a seguinte regra: 
-# 1. O texto deve conter no máximo 50 caracteres. 
+# 1. O texto deve conter no máximo 100 caracteres. 
 # 2. Toda letra utilizada no texto será substituida pelo seu numero no alfabeto menos 5. 
 # 3. Os espaçamento entre as palavras serão conservados. 
 # 4. O sistema deve ser capaz de criptografar e descriptografar o texto corretamente.
@@ -18,6 +18,9 @@ Caracteres = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', '
 
 def criptografaTexto():
     Texto = input("Digite um texto para ser criptografado: ")
+    if len(Texto) > 100:
+        print('Texto muito longo, limite 50 caracteres!')
+        return
     arrayTexto = list(Texto)
     arrayCriptografado = []
     for i in range(len(arrayTexto)):
